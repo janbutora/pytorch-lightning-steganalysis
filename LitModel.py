@@ -356,10 +356,11 @@ class LitModel(pl.LightningModule):
                             type=float,
                             metavar='wd',
                             help='Optimizer weight decay')
-        parser.add_argument('--loss_f',
+        parser.add_argument('--loss-f',
                             default='cross_entropy',
                             type=str,
-                            help='loss function')
+                            help='loss function',
+                            dest='loss_f')
         parser.add_argument('--warmup',
                             default=0,
                             type=int,
